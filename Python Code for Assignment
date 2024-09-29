@@ -1,0 +1,296 @@
+#defining class with constructor(init function to initiate the attributes), setters and getters for each class
+class Customer:
+    def __init__(self, customer_id, name, email, phone, gender):
+        self.customer_id = customer_id
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.gender = gender
+    
+    def set_customer_id(self, customer_id):
+        self.customer_id = customer_id
+    
+    def get_customer_id(self):
+        return self.customer_id
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+    def set_email(self, email):
+        self.email = email
+
+    def get_email(self):
+        return self.email
+
+    def set_phone(self, phone):
+        self.phone = phone
+
+    def get_phone(self):
+        return self.phone
+
+    def set_gender(self, gender):
+        self.gender = gender
+
+    def get_gender(self):
+        return self.gender
+    
+    #making reservation
+    def make_reservation(self):
+        print(f"{self.name} has made a reservation.")
+
+class Receptionist:
+    def __init__(self, employee_id, name, email, shift_time, gender, hotel_number):
+        self.employee_id = employee_id
+        self.name = name
+        self.email = email
+        self.shift_time = shift_time
+        self.gender = gender
+        self.hotel_number = hotel_number
+
+    def set_employee_id(self, employee_id):
+        self.employee_id = employee_id
+
+    def get_employee_id(self):
+        return self.employee_id
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+    def set_email(self, email):
+        self.email = email
+
+    def get_email(self):
+        return self.email
+
+    def set_shift_time(self, shift_time):
+        self.shift_time = shift_time
+
+    def get_shift_time(self):
+        return self.shift_time
+
+    def set_gender(self, gender):
+        self.gender = gender
+
+    def get_gender(self):
+        return self.gender
+
+    def set_hotel_number(self, hotel_number):
+        self.hotel_number = hotel_number
+
+    def get_hotel_number(self):
+        return self.hotel_number
+    
+    # placeholder for checking in customer
+    def check_in_customer(self):
+        print(f"Customer has been checked in by {self.name}.")
+
+class Manager:
+    def __init__(self, manager_id, name, email, phone, gender, department):
+        self.manager_id = manager_id
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.gender = gender
+        self.department = department
+
+    def set_manager_id(self, manager_id):
+        self.manager_id = manager_id
+
+    def get_manager_id(self):
+        return self.manager_id
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+    def set_email(self, email):
+        self.email = email
+
+    def get_email(self):
+        return self.email
+
+    def set_phone(self, phone):
+        self.phone = phone
+
+    def get_phone(self):
+        return self.phone
+
+    def set_gender(self, gender):
+        self.gender = gender
+
+    def get_gender(self):
+        return self.gender
+
+    def set_department(self, department):
+        self.department = department
+
+    def get_department(self):
+        return self.department
+    # placeholder for checking in customer
+    def verifying_room_availability(self):
+        print(f"The room availiblity has been verified and checked by {self.name}")
+
+class Room:
+    def __init__(self, room_number, room_type, availability, price_per_night, floor_number):
+        self.room_number = room_number
+        self.room_type = room_type
+        self.availability = availability
+        self.price_per_night = price_per_night
+        self.floor_number = floor_number
+
+    def set_room_number(self, room_number):
+        self.room_number = room_number
+
+    def get_room_number(self):
+        return self.room_number
+
+    def set_room_type(self, room_type):
+        self.room_type = room_type
+
+    def get_room_type(self):
+        return self.room_type
+
+    def set_availability(self, availability):
+        self.availability = availability
+
+    def get_availability(self):
+        return self.availability
+
+    def set_price_per_night(self, price_per_night):
+        self.price_per_night = price_per_night
+
+    def get_price_per_night(self):
+        return self.price_per_night
+
+    def set_floor_number(self, floor_number):
+        self.floor_number = floor_number
+
+    def get_floor_number(self):
+        return self.floor_number
+    
+    #placeholder to update the room availability
+    def update_availability(self, availability):
+        self.set_availability(availability)
+        print(f"Room {self.room_number} availability updated to {self.get_availability()}.")
+
+class Payment:
+    def __init__(self, payment_id, invoice, amount, payment_date, payment_method):
+        self.payment_id = payment_id
+        self.invoice = invoice
+        self.amount = amount
+        self.payment_date = payment_date
+        self.payment_method = payment_method
+
+    def set_payment_id(self, payment_id):
+        self.payment_id = payment_id
+
+    def get_payment_id(self):
+        return self.payment_id
+
+    def set_invoice(self, invoice):
+        self.invoice = invoice
+
+    def get_invoice(self):
+        return self.invoice
+
+    def set_amount(self, amount):
+        self.amount = amount
+
+    def get_amount(self):
+        return self.amount
+
+    def set_payment_date(self, payment_date):
+        self.payment_date = payment_date
+
+    def get_payment_date(self):
+        return self.payment_date
+
+    def set_payment_method(self, payment_method):
+        self.payment_method = payment_method
+
+    def get_payment_method(self):
+        return self.payment_method
+    
+    #placeholder to process payment
+    def process_payment(self):
+        print(f"Payment of {self.amount} processed via {self.payment_method}.")
+
+
+#here I am creating objects using setters and getters to then populate and display all data
+
+#customer object here
+customer1 = Customer("202112794", "Abdullah Aljeaidi", "abdullahaljeaidi@gmail.com", "0502313636", "Male")
+
+#displaying customer information
+print("Customer Information:")
+print(f"Customer ID: {customer1.get_customer_id()}")
+print(f"Name: {customer1.get_name()}")
+print(f"Email: {customer1.get_email()}")
+print(f"Phone: {customer1.get_phone()}")
+print(f"Gender: {customer1.get_gender()}")
+print()
+
+#receptionist object
+receptionist1 = Receptionist("AUH567", "Mohamed", "MohamedAwad221@gmail.com", "9 AM - 5 PM", "Male", "025612362")
+
+#displaying receptionist info
+print("Receptionist Information:")
+print(f"Employee ID: {receptionist1.get_employee_id()}")
+print(f"Name: {receptionist1.get_name()}")
+print(f"Email: {receptionist1.get_email()}")
+print(f"Shift Time: {receptionist1.get_shift_time()}")
+print(f"Gender: {receptionist1.get_gender()}")
+print(f"Hotel Number: {receptionist1.get_hotel_number()}")
+print()
+
+#room object
+room1 = Room("R202", "Deluxe Sea View", True, "$150", "2")
+
+#displaying room info
+print("Room Information:")
+print(f"Room Number: {room1.get_room_number()}")
+print(f"Room Type: {room1.get_room_type()}")
+print(f"Availability: {'Available' if room1.get_availability() else 'Not Available'}")
+print(f"Price Per Night: {room1.get_price_per_night()}")
+print(f"Floor Number: {room1.get_floor_number()}")
+print()
+
+#showing payment object
+payment1 = Payment("P223", "INV223", 150, "2024-09-30", "Apple Pay")
+
+#displaying payment info
+print("Payment Information:")
+print(f"Payment ID: {payment1.get_payment_id()}")
+print(f"Invoice: {payment1.get_invoice()}")
+print(f"Amount: {payment1.get_amount()}")
+print(f"Payment Date: {payment1.get_payment_date()}")
+print(f"Payment Method: {payment1.get_payment_method()}")
+print()
+
+#manager object
+manager1 = Manager("M2024", "Ahmed AlMehairi", "AhmedAlMehairi@gmail.com", "0506166162", "Male", "Hotel Operations")
+
+#displaying manager info
+print("Manager Information:")
+print(f"Manager ID: {manager1.get_manager_id()}")
+print(f"Name: {manager1.get_name()}")
+print(f"Email: {manager1.get_email()}")
+print(f"Phone: {manager1.get_phone()}")
+print(f"Gender: {manager1.get_gender()}")
+print(f"Department: {manager1.get_department()}")
+print()
+
+#simulating the functionality
+customer1.make_reservation()
+receptionist1.check_in_customer()
+payment1.process_payment()
+manager1.verifying_room_availability()
+room1.update_availability(False)
